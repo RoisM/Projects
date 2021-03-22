@@ -1,0 +1,18 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+#define MAXLINE 255
+
+int main() {
+	FILE *f1V5;
+	char c;
+	int sum = 0;
+	f1V5=fopen("f1V5.txt", "rt");
+	fputc(c, f1V5);
+	while((c = fgetc(f1V5)) != EOF)
+	if (c >= '0' && c <= '9')
+	sum = sum + (c-48);
+	fclose(f1V5);
+	printf("%d", sum);
+	return 0;
+}
